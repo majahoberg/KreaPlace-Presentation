@@ -1,0 +1,232 @@
+<!-- DEFINERER DOKUMENT TYPEN -->
+<!DOCTYPE html>
+
+<!-- DEFINERER SPROGET -->
+<html lang="da">
+
+<head>
+    <!-- TITLE STÅR I FANEBLADET -->
+    <title>KreaPlace</title>
+    <!-- LINK TIL CSS -->
+    <link rel="stylesheet" href="../style/style.css">
+    <!-- BOGSTAVSÆT (Æ,Ø,Å) -->
+    <meta charset="utf-8">
+    <!-- GØR SÅDAN AT BILLEDER FYLDER DET SAMME - IFT PIXEL VIDDE OSV -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BRUGES SOM SEO TIL AT FINDE SIDEN. LAV BESKRIVELSE AF SIDEN I CONTENT. OP TIL CIRKA 155 KARAKTERER -->
+    <meta name="description" content="Her kan du nemt holde styr på og finde dine gemte og købte opskrifter som du har fundet på vores hjemmeside">
+    <!--LINK TIL JQ DROPDOWN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- LILNK TIL GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- NAVIGATION START -->
+    <header>
+        <!-- TIME START -->
+        <div class="api">
+            <p id="dag"></p>
+            <p id="tid"></p>
+        </div>
+        <!-- TIME END -->
+        <a href="../index.html"><img id="navlogo" src="../images/logo-kreaplace.png" alt="KreaPlace's Logo"></a>
+
+        <nav>
+            <a href="../pages/strik.html">
+                <p>Strik</p>
+            </a>
+            <a href="../pages/haekling.html">Hækling</a>
+            <a href="../pages/inspiration.html">Inspiration</a>
+            <a href="../pages/omos.html">
+                <p>Om os</p>
+            </a>
+            <a href="../pages/minside.html">
+                <p id="minSideNav"> Min side</p>
+            </a>
+        </nav>
+    </header>
+    <!-- NAVIGATION END -->
+
+
+    <!-- OVERSKRIFT START -->
+    <div id="headerFoto"> <img src="../images/overskrift-minside.jpg" alt="Person som strikker">
+        <div class="headerOverskrift">
+            <h1>Min side</h1>
+        </div>
+    </div>
+    <!-- OVERSKRIFT END -->
+
+
+    <!-- SØG START -->
+    <section class="minSide" id="soegOpskrifter">
+        <h2>Søg i dine opskrifter</h2>
+        <section id="minSideSearch" class="search-container">
+            <form action="/action_page.php">
+                <input class="search-bar" type="text" placeholder="Søg her" name="search">
+            </form>
+        </section>
+    </section>
+    <!-- SØG END -->
+
+    <!-- LOGIN START -->
+
+    <!-- POP UP START -->
+
+    <div class="popupvindu" id="popupvindu">
+        <button type="button" onclick="document.getElementById('popupvindu').style.display='none'" class="close-button">&times;</button>
+        <section class="popUpTekstfelt">
+            <h3>Hov! Vi kan se, at du ikke er logget ind &#128577;</h3>
+            <p>For at gemme opskrifter skal du logge ind eller oprette en profil:</p>
+        </section>
+
+        <section class="popUpValgKnapSektion">
+            <button type="button" onclick="document.getElementById('popUpLogin').style.display='block'" id="Logind" class="popupvinduknap">Log ind</button>
+            <button type="button" onclick="document.getElementById('popUpOpret').style.display='block'" id="opretProfil" class="popupvinduknap">Opret profil</button>
+        </section>
+    </div>
+
+
+
+
+
+    <div class="popupvindu" id="popUpLogin">
+        <button type="button" onclick="document.getElementById('popUpLogin').style.display='none'" class="close-button">&times;</button>
+        <section class="popUpTekstfelt">
+            <h3>Log ind</h3>
+            <p>Skriv dine oplysninger for at logge ind:</p>
+        </section>
+        <div class="indputfelter">
+            <input type="text" placeholder="Email">
+            <input type="password" placeholder="Kodeord">
+        </div>
+        <section class="popUpKnapSektion">
+            <button type="button" onclick="document.getElementById('popUpLogin').style.display='none'" class="popupvinduknap">Log ind</button>
+        </section>
+    </div>
+
+
+
+
+
+    <div class="popupvindu" id="popUpOpret">
+        <button type="button" onclick="document.getElementById('popUpOpret').style.display='none'" class="close-button">&times;</button>
+        <section class="popUpTekstfelt">
+            <h3>Opret profil</h3>
+            <p>Skriv dine oplysninger for at oprette en profil:</p>
+        </section>
+        <div class="indputfelter">
+            <input type="text" placeholder="Email">
+            <input type="password" placeholder="Kodeord">
+        </div>
+        <section class="popUpKnapSektion">
+            <button type="button" onclick="document.getElementById('popUpOpret').style.display='none'" class="popupvinduknap">Opret profil</button>
+        </section>
+    </div>
+
+    <!-- POP UP SLUT -->
+    <!-- LOGIN END -->
+
+    <!-- KØBTE OPSKRIFTER START -->
+    <section class="minSide" id="koebteOpskrifter">
+        <h2>Mine købte opskrifter</h2>
+        <section class="koebteopskrifter">
+            <div class="koebteopskrifter-container">
+                <a href="strik-sweater.html" target="_blank">
+                    <div class="container-billeder"><img src="../images/strik-petitesweater.jpg" alt="Hæklet pude" width="250" height="250">
+                        <p>Petite Sweater m. Mønster</p>
+                    </div>
+                </a>
+
+                <div class="container-billeder"><img src="../images/strik-stroempe.jpg" alt="Hæklet pude" width="250" height="250">
+                    <p>Strikket strømper m. Striber</p>
+                </div>
+
+                <div class="container-billeder"><img src="../images/strik-sweater.jpg" alt="Sweater m. mønster" width="250" height="250">
+                    <p>Strikket Sweater m. Mønster</p>
+                </div>
+
+                <div class="container-billeder"><img src="../images/strik-roedstroempe.jpg" alt="Røde strømper" width="250" height="250">
+                    <p>Strikket røde Strømper</p>
+                </div>
+
+                <div class="container-billeder"><img src="../images/haekling-puder.jpg" alt="Hæklet puder" width="250" height="250">
+                    <p>Hæklet puder</p>
+                </div>
+
+                <a href="haekling-grydelapper.html" target="_blank">
+                    <div class="container-billeder"><img src="../images/haekling-grydelapper.jpg" alt="Hæklet grydelapper" width="250" height="250">
+                        <p>Hæklede Grydelapper</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </section>
+    <!-- KØBTE OPSKRIFTER END -->
+
+
+    <!-- GEMTE OPSKRIFTER START -->
+    <section class="minSide" id="gemteOpskrifter">
+        <h2>Mine gemte opskrifter</h2>
+        <section class="gemteopskrifter">
+            <div class="gemteopskrifter-container">
+                <a href="haekling-grydelapper.html" target="_blank">
+                    <div class="container-billeder-gemt"><img src="../images/haekling-grydelapper.jpg" alt="Hæklet grydelapper" width="250" height="250">
+                        <p>Hæklede grydelapper</p>
+                    </div>
+                </a>
+
+                <div class="container-billeder-gemt"><img src="../images/strik-roedstroempe.jpg" alt="røde strømper" width="250" height="250">
+                    <p>Strikket røde Strømper</p>
+                </div>
+
+                <div class="container-billeder-gemt"><img src="../images/strik-stroempe.jpg" alt="strømper med striber" width="250" height="250">
+                    <p>Strikket Strømper m. Striber</p>
+                </div>
+
+                <div class="container-billeder-gemt"><img src="../images/haekling-puder.jpg" alt="Hæklet puder" width="250" height="250">
+                    <p>Hæklet puder</p>
+                </div>
+
+                <div class="container-billeder-gemt"><img src="../images/haekling-pude.jpg" alt="Hæklet pude" width="250" height="250">
+                    <p>Hæklet pude m. knap</p>
+                </div>
+
+                <div class="container-billeder-gemt"><img src="../images/haekling-hjerter.jpg" alt="Hæklet hjerter" width="250" height="250">
+                    <p>Hæklet hjerter</p>
+                </div>
+
+                <div class="container-billeder-gemt"><img src="../images/strik-sweater.jpg" alt="sweater strikket" width="250" height="250">
+                    <p>Strikket Sweater m. Mønster</p>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!-- GEMTE OPSKRIFTER END -->
+
+    <!-- FOOTER START -->
+    <footer>
+        <section class="footerimg">
+            <a href="https://www.facebook.com/KreaPlace/" target="_blank"><img src="../images/ikon-facebook.png" alt="Facebook Logo"></a>
+        </section>
+        <section>
+            <h3>Kontakt os</h3>
+            <p>Mail: hejmeddig@dig.dk
+                <br>Tlf.: +45 23 04 23</p>
+        </section>
+        <section class="footerimg">
+            <a href="https://www.instagram.com/kreaplace/" target="_blank"><img src="../images/ikon-instagram.png" alt="Instagram Logo"></a>
+        </section>
+
+        <section class="footerBot">
+            <p>KreaPlace | Holsteinsgade 9 | 8300 Odder</p>
+            <p class="footerGrey">Copyright © 2020 KreaPlace ApS. All Rights Reserved.</p>
+        </section>
+    </footer>
+    <!-- FOOTER END -->
+
+
+    <script src="../js/javascript.js" type="text/javascript"></script>
+</body>
+
+</html>

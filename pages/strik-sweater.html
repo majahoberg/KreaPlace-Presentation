@@ -1,0 +1,196 @@
+<!-- DEFINERER DOKUMENT TYPEN -->
+<!DOCTYPE html>
+
+<!-- DEFINERER SPROGET -->
+<html lang="da">
+
+<head>
+    <!-- TITLE STÅR I FANEBLADET -->
+    <title>KreaPlace</title>
+    <!-- LINK TIL CSS -->
+    <link rel="stylesheet" href="../style/style.css">
+    <!-- BOGSTAVSÆT (Æ,Ø,Å) -->
+    <meta charset="utf-8">
+    <!-- GØR SÅDAN AT BILLEDER FYLDER DET SAMME - IFT PIXEL VIDDE OSV -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BRUGES SOM SEO TIL AT FINDE SIDEN. LAV BESKRIVELSE AF SIDEN I CONTENT. OP TIL CIRKA 155 KARAKTERER -->
+    <meta name="description" content="Fin strikkeopskrift til nybegyndere. Nem at læse og forstå. Du ender med at få en rigtig fin og sød strikket sweater med mønster på fronten.">
+    <!--LINK TIL JQ DROPDOWN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- LILNK TIL GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- LILNK TIL FLICKITY CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <!-- LILNK TIL FLICKITY JS -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</head>
+
+<body>
+    <!-- NAVIGATION START -->
+    <header>
+       <!-- TIME START -->
+        <div class="api">
+            <p id="dag"></p>
+            <p id="tid"></p>
+        </div>
+        <!-- TIME END -->
+        <a href="../index.html"><img id="navlogo" src="../images/logo-kreaplace.png" alt="KreaPlace's Logo"></a>
+        <nav>
+            <a href="strik.html">
+                <p>Strik</p>
+            </a>
+            <a href="haekling.html">Hækling</a>
+            <a href="inspiration.html">Inspiration</a>
+            <a href="omos.html">Om os</a>
+            <a href="minside.html">Min side</a>
+        </nav>
+    </header>
+    <!-- NAVIGATION END -->
+
+
+
+    <!-- UNDERSIDE INDHOLD START -->
+    <main>
+        <h1 class="undersideOverskrift">Petite strik sweater m. mønster</h1>
+
+
+        <section class="billedeGalleri">
+
+            <section class="billedeGrid">
+                <div class="overstebillede">
+                    <img class="responsivBillede" src="../images/strik-petitesweater.jpg" alt="strikket sweater">
+                </div>
+                <div class="nederstTilVenstre">
+                    <img class="responsivBillede" src="../images/strik-petitesweater-zoom-hals.jpg" alt="strikket petite hals">
+                </div>
+                <div class="nederstTilHojre">
+                    <img class="responsivBillede" src="../images/strik-petitesweater-zoom-mave.jpg" alt="strikket petite mave">
+                </div>
+            </section>
+
+            <div>
+                <div class="opskriftInfo">
+                    <p><strong>Sværhedsgrad:</strong> 2 ud af 5</p>
+                    <p>Rigtig fin sweater som er god om sommeren, da den ikke er for varm. Kna matches fint med kjoler eller jeans. Sweateren er strikket i glat-strik og rib. Derfor er den god til begyndere som det første større projekt. Der er mulighed for selv at tilpasse længden i livet og i ærmerne. Sweateren strikkes oppefra og ned.</p>
+
+                    <p><strong>Størrelser:</strong> XS (S) M (L) XL</p>
+                    <p><strong>Pinde:</strong> RundPinde 3mm (40cm) og 4,5 mm (40 cm og 80 cm) </p>
+
+                    <p> <strong>Teknikker</strong> Ret, vrang, udtagninger</p>
+                </div>
+
+                <div class="lillaknap">Find Opskriften Her</div>
+            </div>
+
+        </section>
+
+
+
+
+        <!--  ANDRE KIGGEDE OGSÅ PÅ START 
+        <h2 class="undersideOverskrift">Andre kiggede også på</h2>
+
+        <section class="populaere-container">
+            <article class="populaere">
+                <div class="">
+                    <img src="../images/strik-sweater.jpg" alt="Strikket sweater med mønster">
+                    <p>Sweater m. mønster</p>
+                </div>
+                <div class="">
+                    <img src="../images/strik-roedstroempe.jpg" alt="Røde strik strømper">
+                    <p>Strikket Røde Strømper</p>
+                </div>
+                <div class="">
+                    <img src="../images/haekling-hjerter.jpg" alt="hæklede små hjerter">
+                    <p>Hæklede små hjerter</p>
+                </div>
+            </article>
+        </section>
+        -->
+        
+        <section class="populaere-container" id="populaere-inspiration">
+        <h1>Mest populære opskrifter</h1>
+
+        <!-- FRA FLICKITY: https://flickity.metafizzy.co/ -->
+        <div class="carousel" data-flickity='{ "groupCells": true, "draggable": false }'>
+            <section class="carousel-cell-box">
+                <div class="carousel-cell" id="carousel-cell1"></div>
+                <p>Strømper m. striber</p>
+            </section>
+            <section class="carousel-cell-box">
+                <div class="carousel-cell" id="carousel-cell2"></div>
+                <p>Sweater m. mønster</p>
+            </section>
+            <section class="carousel-cell-box">
+                <a href="haekling-grydelapper.html" target="_blank"><div class="carousel-cell" id="carousel-cell3"></div>
+                <p>Grydelapper</p></a>
+            </section>
+            <section class="carousel-cell-box">
+                <div class="carousel-cell" id="carousel-cell4"></div>
+                <p>Strømper m. striber</p>
+            </section>
+            <section class="carousel-cell-box">
+                <div class="carousel-cell" id="carousel-cell5"></div>
+                <p>Pude m. knap</p>
+            </section>
+            <section class="carousel-cell-box">
+                <div class="carousel-cell" id="carousel-cell6"></div>
+                <p>Små hjerte puder</p>
+            </section>
+            <section class="carousel-cell-box">
+                <a href="strik-sweater.html" target="_blank"><div class="carousel-cell" id="carousel-cell7"></div>
+                <p>Petite sweater</p></a>
+            </section>
+            <section class="carousel-cell-box">
+                <a href="haekling-grydelapper.html" target="_blank"><div class="carousel-cell" id="carousel-cell8"></div>
+                <p>Grydelapper</p></a>
+            </section>
+            <section class="carousel-cell-box">
+                <a href="haekling-grydelapper.html" target="_blank"><div class="carousel-cell" id="carousel-cell9"></div>
+                <p>Grydelapper</p></a>
+            </section>
+        </div>
+        </section>
+
+        <!--  ANDRE KIGGEDE OGSÅ PÅ SLUT -->
+
+
+        <!-- SAMARBEJDSPARTNERE START -->
+        <hr class="top">
+        <section class="samarbejdspartner">
+            <img src="../images/sponsor-stofogstil.png" alt="Stof og Stil's logo">
+            <img src="../images/sponsor-citystofferoggarn.png" alt="City Stoffer Garn's logo">
+            <img src="../images/sponsor-yarnfreak.png" alt="Yarnfreak's logo">
+        </section>
+        <hr class="bot">
+        <!-- SAMARBEJDSPARTNERE END -->
+
+    </main>
+    <!-- UNDERSIDE INDHOLD END -->
+    
+    
+    <!-- FOOTER START -->
+    <footer>
+        <section class="footerimg">
+            <a href="https://www.facebook.com/KreaPlace/" target="_blank"><img src="../images/ikon-facebook.png" alt="Facebook Logo"></a>
+        </section>
+        <section>
+            <h3>Kontakt os</h3>
+            <p>Mail: hejmeddig@dig.dk
+                <br>Tlf.: +45 23 04 23</p>
+        </section>
+        <section class="footerimg">
+            <a href="https://www.instagram.com/kreaplace/" target="_blank"><img src="../images/ikon-instagram.png" alt="Instagram Logo"></a>
+        </section>
+
+        <section class="footerBot">
+            <p>KreaPlace | Holsteinsgade 9 | 8300 Odder</p>
+            <p class="footerGrey">Copyright © 2020 KreaPlace ApS. All Rights Reserved.</p>
+        </section>
+    </footer>
+    <!-- FOOTER END -->
+
+    <script src="../js/javascript.js" type="text/javascript"></script>
+</body>
+
+</html>

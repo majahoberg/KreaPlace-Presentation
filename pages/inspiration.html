@@ -1,0 +1,218 @@
+<!-- DEFINERER DOKUMENT TYPEN -->
+<!DOCTYPE html>
+
+<!-- DEFINERER SPROGET -->
+<html lang="da">
+
+<head>
+    <!-- TITLE STÅR I FANEBLADET -->
+    <title>KreaPlace</title>
+    <!-- LINK TIL CSS -->
+    <link rel="stylesheet" href="../style/style.css">
+    <!-- BOGSTAVSÆT (Æ,Ø,Å) -->
+    <meta charset="utf-8">
+    <!-- GØR SÅDAN AT BILLEDER FYLDER DET SAMME - IFT PIXEL VIDDE OSV -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BRUGES SOM SEO TIL AT FINDE SIDEN. LAV BESKRIVELSE AF SIDEN I CONTENT. OP TIL CIRKA 155 KARAKTERER -->
+    <meta name="description" content="Find inspiration til dit næste strikke eller hækle projekt. Find inspiration ved forskellige bloggere eller blandt vores mest populære opskrifter.">
+    <!--LINK TIL JQ DROPDOWN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- LILNK TIL GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- LILNK TIL FLICKITY CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <!-- LILNK TIL FLICKITY JS -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</head>
+
+<body>
+    <!-- NAVIGATION START -->
+    <header>
+       <!-- TIME START -->
+        <div class="api">
+            <p id="dag"></p>
+            <p id="tid"></p>
+        </div>
+        <!-- TIME END -->
+        <a href="../index.html"><img id="navlogo" src="../images/logo-kreaplace.png" alt="KreaPlace's Logo"></a>
+        <nav>
+            <a href="strik.html">
+                <p>Strik</p>
+            </a>
+            <a href="haekling.html">Hækling</a>
+            <a id="navInspiration" href="inspiration.html">Inspiration</a>
+            <a href="omos.html">Om os</a>
+            <a href="minside.html">Min side</a>
+        </nav>
+    </header>
+    <!-- NAVIGATION END -->
+
+
+    <!-- OVERSKRIFT START -->
+    <div id="headerFoto"> <img src="../images/overskrift-inspiration.jpg" alt="Inspirerende garnnøgler">
+        <div class="headerOverskrift">
+            <h1>Inspiration</h1>
+        </div>
+    </div>
+    <!-- OVERSKRIFT END -->
+
+
+    <!-- MEST POPULÆRE BLOGGERE START 
+    <section id="bagKreaplace">
+        <h2>Anbefalede blogs</h2>
+        <a href="https://www.google.com/" target="_blank"><img src="../images/blogger-carolinejepsen.jpg" alt="Caroline Jensen Blog"></a>
+        <a href="https://www.google.com/" target="_blank"><img src="../images/blogger-lykkemoeller.jpg" alt="Lykke Møller Blog"></a>
+        <a href="https://www.google.com/" target="_blank"><img src="../images/blogger-emilielaursen.jpg" alt="Emilie Laursen Blog"></a>
+    </section>
+    -->
+    
+    
+    
+    
+    <section class="populaere-container" id="populaere-inspiration">
+        <h1>Anbefalede blogs</h1>
+
+        <!-- FRA FLICKITY: https://flickity.metafizzy.co/ -->
+        <div class="carousel" data-flickity='{ "groupCells": true, "draggable": false }'>
+            <section class="carousel-cell-box">
+                <a href="https://www.google.com/" target="_blank"><div class="carousel-cell-inspiration" id="inspiration-cell1"></div></a>
+            </section>
+            <section class="carousel-cell-box">
+                <a href="https://www.google.com/" target="_blank"><div class="carousel-cell-inspiration" id="inspiration-cell2"></div></a>
+            </section>
+            <section class="carousel-cell-box">
+                <a href="https://www.google.com/" target="_blank"><div class="carousel-cell-inspiration" id="inspiration-cell3"></div></a>
+            </section>
+            <section class="carousel-cell-box">
+                <a href="https://www.google.com/" target="_blank"><div class="carousel-cell-inspiration" id="inspiration-cell4"></div></a>
+            </section>
+            <section class="carousel-cell-box">
+                <a href="https://www.google.com/" target="_blank"><div class="carousel-cell-inspiration" id="inspiration-cell5"></div></a>
+            </section>
+            <section class="carousel-cell-box">
+                <a href="https://www.google.com/" target="_blank"><div class="carousel-cell-inspiration" id="inspiration-cell6"></div></a>
+            </section>
+        </div>
+        </section>
+    <!-- MEST POPULÆRE BLOGGERE END -->
+
+
+    <!-- INSTAGRAM OPSLAG START -->
+
+    <!-- overskrift -->
+    <section class="instagram-container">
+        <h2>Opslag på Instagram</h2>
+
+        <!-- Billede grid -->
+        <div class="InspirationInstagram">
+
+
+            <a href="https://www.instagram.com/p/B_P4KoQnLXD/" target="_blank"><img src="../images/butterfly-instagram.jpg" alt="Hæklet butterfly post fra KreaPlace's Instagram"></a>
+
+            <a href="https://www.instagram.com/p/B_XY4DYHcxM/" target="_blank"><img src="../images/slik-instagram.jpg" alt="Hæklet slik fra KreaPlace's Instagram"></a>
+
+            <a href="https://www.instagram.com/p/B-_nvOWj0-x/" target="_blank"><img src="../images/aber-instagram.jpg" alt="Hæklet abe fra KreaPlace's Instagram"></a>
+
+            <a href="https://www.instagram.com/p/B-9hJUODEPX/" target="_blank"><img src="../images/faar-instagram.jpg" alt="Hæklet får fra KreaPlace's Instagram"></a>
+        </div>
+    </section>
+    <!-- Billede grid SLUT -->
+
+
+
+
+    <!--  POPULÆRE OPSKRIFTER START 
+    <section class="populaere-container">
+        <h1>Mest populære opskrifter</h1>
+        <article class="populaere">
+            <div>
+                <img src="../images/strik-roedstroempe.jpg" alt="Røde strik strømper">
+                <p>Strømper m. striber</p>
+            </div>
+            <div>
+                <img src="../images/strik-sweater.jpg" alt="Strik sweater med mønster">
+                <p>Sweater m. mønster</p>
+            </div>
+            <a href="haekling-grydelapper.html" target="_blank">
+                <div>
+                    <img src="../images/haekling-grydelapper.jpg" alt="Hæklede grydelapper">
+                    <p>Grydelapper</p>
+                </div>
+            </a>
+        </article>
+    </section>
+    -->
+    
+    
+    
+    <section class="populaere-container" id="populaere-inspiration">
+        <h1>Mest populære opskrifter</h1>
+
+        <!-- FRA FLICKITY: https://flickity.metafizzy.co/ -->
+        <div class="carousel" data-flickity='{ "groupCells": true, "draggable": false }'>
+            <section class="carousel-cell-box">
+                <div class="carousel-cell" id="carousel-cell1"></div>
+                <p>Strømper m. striber</p>
+            </section>
+            <section class="carousel-cell-box">
+                <div class="carousel-cell" id="carousel-cell2"></div>
+                <p>Sweater m. mønster</p>
+            </section>
+            <section class="carousel-cell-box">
+                <a href="haekling-grydelapper.html" target="_blank"><div class="carousel-cell" id="carousel-cell3"></div>
+                <p>Grydelapper</p></a>
+            </section>
+            <section class="carousel-cell-box">
+                <div class="carousel-cell" id="carousel-cell4"></div>
+                <p>Strømper m. striber</p>
+            </section>
+            <section class="carousel-cell-box">
+                <div class="carousel-cell" id="carousel-cell5"></div>
+                <p>Pude m. knap</p>
+            </section>
+            <section class="carousel-cell-box">
+                <div class="carousel-cell" id="carousel-cell6"></div>
+                <p>Små hjerte puder</p>
+            </section>
+            <section class="carousel-cell-box">
+                <a href="strik-sweater.html" target="_blank"><div class="carousel-cell" id="carousel-cell7"></div>
+                <p>Petite sweater</p></a>
+            </section>
+            <section class="carousel-cell-box">
+                <a href="haekling-grydelapper.html" target="_blank"><div class="carousel-cell" id="carousel-cell8"></div>
+                <p>Grydelapper</p></a>
+            </section>
+            <section class="carousel-cell-box">
+                <a href="haekling-grydelapper.html" target="_blank"><div class="carousel-cell" id="carousel-cell9"></div>
+                <p>Grydelapper</p></a>
+            </section>
+        </div>
+        </section>
+    <!-- POPULÆRE OPSKRIFTER END -->
+
+
+    <!-- FOOTER START -->
+    <footer>
+        <section class="footerimg">
+            <a href="https://www.facebook.com/KreaPlace/" target="_blank"><img src="../images/ikon-facebook.png" alt="Facebook Logo"></a>
+        </section>
+        <section>
+            <h3>Kontakt os</h3>
+            <p>Mail: hejmeddig@dig.dk
+                <br>Tlf.: +45 23 04 23</p>
+        </section>
+        <section class="footerimg">
+            <a href="https://www.instagram.com/kreaplace/" target="_blank"><img src="../images/ikon-instagram.png" alt="Instagram Logo"></a>
+        </section>
+
+        <section class="footerBot">
+            <p>KreaPlace | Holsteinsgade 9 | 8300 Odder</p>
+            <p class="footerGrey">Copyright © 2020 KreaPlace ApS. All Rights Reserved.</p>
+        </section>
+    </footer>
+    <!-- FOOTER END -->
+
+    <script src="../js/javascript.js" type="text/javascript"></script>
+</body>
+
+</html>

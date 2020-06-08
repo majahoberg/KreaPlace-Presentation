@@ -1,0 +1,857 @@
+/* FARVER = 
+GRÅ #EDECEA 
+MØRK-LILLA #474553 
+LYS-LILLA #C6BBC3 */
+
+/* tilføjet for at være sikker på der ikke er en indbygget kant + ALLE ELEMTER MEDREGNER PADDING OG BORDER I DERES STØRRELSE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* NAVIGATION START */
+.api {
+    padding-top: 15px;
+    margin-bottom: -20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 35px;
+}
+
+#dag {
+    margin-right: 10px;
+}
+
+.indexMain {
+    background-image: url("../images/overskrift-forside.jpg");
+    background-size: cover;
+    height: 100vh;
+}
+
+#navlogo {
+    display: block;
+    margin: 0px auto;
+    padding: 10px;
+    width: 190px;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    letter-spacing: 3px
+}
+
+a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8);
+    margin: 0 40px;
+}
+
+#logo {
+    width: 200px;
+    height: 100%;
+}
+
+/* NAVIGATION END */
+
+
+/* OVERSKRIFT START */
+#navStrik {
+    font-weight: bold;
+}
+
+#navHaekling {
+    font-weight: bold;
+}
+
+#navInspiration {
+    font-weight: bold;
+}
+
+#headerFoto img {
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    margin-top: 30px;
+}
+
+.headerOverskrift h1 {
+    text-align: center;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 70px;
+    font-weight: 500;
+    color: #474553;
+    letter-spacing: 3px;
+}
+
+/* OVERSKRIFT END */
+
+
+/* SEARCHBAR START */
+.search-container {
+    height: 60vh;
+    text-align: center;
+    padding-top: 180px;
+}
+
+.search-bar {
+    padding: 20px;
+    padding-right: 90px;
+    padding-left: 90px;
+    background-color: rgba(0, 0, 0, 0.07);
+    border: none;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-align: center;
+    border-radius: 20px;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.search-bar:focus {
+    text-transform: lowercase;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+/* SEARCHBAR END */
+
+
+
+.lillaknap {
+    padding-right: 100px;
+    padding-left: 50px;
+    background-color: #c6bbc3;
+    padding: 20px;
+    text-align: center;
+    margin: 3%;
+    border: none;
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+}
+
+/* KNAPPER (NU FÆRDIG UDVIKLET)
+
+/* Pop Up Vindu START */
+
+.popupvindu {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 6ms ease-in-out;
+    z-index: 1;
+    background-color: #EDECEA;
+    width: 1000px;
+    max-width: 80%;
+    height: 380px;
+    max-height: 60%;
+    opacity: 95%;
+}
+
+.popupvindu h3 {
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+.popupvindu p {
+    font-weight: 300;
+}
+
+.popUpKnapSektion button {
+    font-family: 'Raleway';
+    font-weight: 300;
+}
+
+.popUpValgKnapSektion button {
+    font-family: 'Raleway';
+    font-weight: 300;
+}
+
+.close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 2.50em;
+    padding-left: 90%;
+    padding-top: 2%;
+}
+
+.popUpTekstfelt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    max-height: 20%;
+    font-size: 1.55em;
+    max-width: 100%;
+}
+
+.indputfelter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.indputfelter input {
+    padding: 10px;
+    margin: 1%;
+    border-radius: 10px;
+    border: none;
+}
+
+.popUpValgKnapSektion {
+    padding: 10px 150px;
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.popUpKnapSektion {
+    padding: 10px 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.popupvinduknap {
+    cursor: pointer;
+    border: #C6BBC3;
+    border-radius: 15px;
+    background: #C6BBC3;
+    font-size: 1.5em;
+    width: 250px;
+    max-width: 60%;
+    height: 50px;
+    max-height: 40%;
+}
+
+#popUpLogin {
+    display: none;
+}
+
+#popUpOpret {
+    display: none;
+}
+
+
+/* Pop Up Vindu SLUT */
+
+/* FRA FLICKITY: https://flickity.metafizzy.co/ */
+.populaere-container {
+    padding-top: 300px;
+    padding-bottom: 50px;
+}
+
+.populaere-container h1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    color: #333333;
+    padding-bottom: 40px;
+}
+
+#populaere-inspiration {
+    padding-top: 80px;
+    padding-bottom: 100px
+}
+
+.carousel {
+    width: 70%;
+    margin: 0 auto
+}
+
+.carousel-cell {
+    width: 90%;
+    height: 220px;
+    margin-right: 10px;
+    counter-increment: carousel-cell;
+}
+
+.carousel-cell-box {
+    width: 30%;
+    padding-left: 35px;
+    margin-right: 15px;
+}
+
+.carousel-cell-box a {
+    margin: 0;
+}
+
+.carousel p {
+    background-color: #EDECEA;
+    width: 90%;
+    height: 40px;
+    text-align: center;
+    padding-top: 9px
+}
+
+
+#carousel-cell1 {
+    background-image: url(../images/strik-roedstroempe.jpg);
+    background-size: cover;
+}
+
+#carousel-cell2 {
+    background-image: url(../images/strik-sweater.jpg);
+    background-size: cover;
+}
+
+#carousel-cell3 {
+    background-image: url(../images/haekling-grydelapper.jpg);
+    background-size: cover;
+}
+
+#carousel-cell4 {
+    background-image: url(../images/strik-stroempe.jpg);
+    background-size: cover;
+}
+
+#carousel-cell5 {
+    background-image: url(../images/haekling-pude.jpg);
+    background-size: cover;
+}
+
+#carousel-cell6 {
+    background-image: url(../images/haekling-hjerter.jpg);
+    background-size: cover;
+}
+
+#carousel-cell7 {
+    background-image: url(../images/strik-petitesweater.jpg);
+    background-size: cover;
+}
+
+#carousel-cell8 {
+    background-image: url(../images/haekling-grydelapper.jpg);
+    background-size: cover;
+}
+
+#carousel-cell9 {
+    background-image: url(../images/haekling-grydelapper.jpg);
+    background-size: cover;
+}
+
+/* INSPIRATION UNDERSIDE - FORTSAT FRA FLICKITY: https://flickity.metafizzy.co/ */
+
+.carousel-cell-inspiration {
+    width: 90%;
+    border-radius: 300px;
+    height: 240px;
+    margin-right: 0px;
+    counter-increment: carousel-cell;
+}
+
+#inspiration-cell1 {
+    background-image: url(../images/blogger-carolinejepsen.jpg);
+    background-size: cover;
+}
+
+#inspiration-cell2 {
+    background-image: url(../images/blogger-lykkemoeller.jpg);
+    background-size: cover;
+}
+
+#inspiration-cell3 {
+    background-image: url(../images/blogger-emilielaursen.jpg);
+    background-size: cover;
+}
+
+#inspiration-cell4 {
+    background-image: url(../images/blogger-annejensen.jpg);
+    background-size: cover;
+}
+
+#inspiration-cell5 {
+    background-image: url(../images/blogger-rikkejohansen.jpg);
+    background-size: cover;
+}
+
+#inspiration-cell6 {
+    background-image: url(../images/blogger-camillahansen.jpg);
+    background-size: cover;
+}
+
+/* POPULÆRE OPSKRIFTER END */
+
+
+/* STRIK DROPDOWN START */
+.checkbox-dropdown {
+    width: 300px;
+    background-color: #EDECEA;
+    padding: 20px;
+    position: relative;
+    user-select: none;
+    text-align: center;
+    margin: 50px;
+}
+
+.checkbox-dropdown:hover {
+    background-color: #C6BBC3;
+}
+
+/* Drop down menu fra https://codepen.io/thecel/pen/EVeGpB */
+.checkbox-dropdown-list {
+    list-style: none;
+    color: dimgrey;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    /* align the dropdown right below the dropdown text */
+    border: inherit;
+    border-top: none;
+    left: -10px;
+    /* align the dropdown to the left */
+    right: -1px;
+    /* align the dropdown to the right */
+    opacity: 0;
+    /* hide the dropdown */
+    transition: opacity 0.4s ease-in-out;
+    height: 100px;
+    overflow-x: visible;
+    pointer-events: none;
+    /* avoid mouse click events inside the dropdown */
+    z-index: 1;
+    background-color: #EDECEA;
+}
+
+.is-active .checkbox-dropdown-list {
+    opacity: 1;
+    /* display the dropdown */
+    pointer-events: auto;
+    /* make sure that the user still can select checkboxes */
+}
+
+.checkbox-dropdown-list li label {
+    display: block;
+    height: 60px;
+    padding: 10px;
+    transition: all 0.2s ease-out;
+    background-color: #EDECEA;
+}
+
+.checkbox-dropdown-list li label:hover {
+    background-color: #555;
+    color: white;
+}
+
+.checkbox-dropdown-list li label input {
+    float: right;
+}
+
+/* Drop down menu fra https://codepen.io/thecel/pen/EVeGpB */
+/* STRIK DROPDOWN END */
+
+
+/* STRIK OPSKRIFTER START */
+.strikOpskrifterFotos a {
+    margin: 0;
+}
+
+#opskrifterOgcheckbox {
+    display: flex;
+    padding: 30px;
+    margin-bottom: 50px;
+}
+
+#checkboxOpskrifter {
+    margin-left: 100px;
+}
+
+.strikOpskrifterFotos {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    justify-content: center;
+}
+
+.strikOpskrifterFotos div {
+    padding: 32px;
+    margin: 20px;
+}
+
+.strikOpskrifterFotos div img {
+    width: 250px;
+}
+
+.strikOpskrifterFotos div p {
+    padding: 10px;
+    margin-top: -5px;
+    background-color: #EDECEA;
+    text-align: center;
+}
+
+/* STRIK OPSKRIFTER END */
+
+
+/* UNDERSIDER STRIKKEDE/HÆKLEDE OPSKRIFTER START */
+.undersideOverskrift {
+    display: flex;
+    justify-content: center;
+    margin: 5% auto 3% auto;
+    padding-top: 40px;
+    font-size: 35px;
+    font-weight: 300;
+}
+
+.billedeGalleri {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.billedeGrid {
+    display: grid;
+    grid-gap: 30px;
+    margin: auto 3%;
+    width: 100%;
+    margin-bottom: 105px
+}
+
+.billedeGrid-heakling {
+    display: grid;
+    grid-gap: 30px;
+    margin-right: auto;
+    width: 60%;
+    padding-bottom: 77px;
+    padding-top: 0px;
+    padding-left: 40px;
+    padding-right: 30px;
+}
+
+.overstebillede {
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+.nederstTilVenstre {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.nederstTilHojre {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.responsivBillede {
+    width: 100%;
+    max-width: 1000px;
+    padding-bottom: 25px;
+}
+
+.opskriftInfo {
+    background: #EDECEA;
+    margin-top: 20px;
+}
+
+.opskriftInfo p {
+    font-size: 25px;
+    padding: 3%;
+}
+
+strong {
+    font-weight: 500;
+}
+
+/* HER SLUTTER TEKST SEKTIONEN */
+/* UNDERSIDER STRIKKEDE OPSKRIFTER END */
+
+
+/* OM OS START */
+#navOmos {
+    font-weight: bold;
+}
+
+#bagKreaplace h2 {
+    font-size: 35px;
+    font-weight: 300;
+    padding-top: 40px;
+}
+
+#bagKreaplace {
+    height: 500px;
+    background-color: white;
+    text-align: center;
+}
+
+#bagKreaplace a {
+    margin: 0;
+}
+
+#bagKreaplace img {
+    width: 280px;
+    border-radius: 200px;
+    margin: 40px;
+}
+
+#omOsinfo {
+    background-color: #EDECEA;
+    height: 580px;
+    text-align: center;
+}
+
+#hvemErvi h2,
+#voresRejse h2 {
+    text-align: center;
+    line-height: 80px;
+    font-weight: 300;
+    font-size: 35px;
+}
+
+#hvemErvi,
+#voresRejse {
+    width: 38%;
+    vertical-align: top;
+    display: inline-block;
+    font-size: 20px;
+    margin: 30px;
+    text-align: left;
+    line-height: 40px;
+    color: dimgrey;
+    font-size: 22px;
+}
+
+/* OM OS END */
+
+
+/* SAMARBEJDSPARTNERE START */
+.samarbejdspartner {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.samarbejdspartner a {
+    margin: 0;
+}
+
+.samarbejdspartner img {
+    height: 50px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.top {
+    width: 90%;
+    border: none;
+    margin: 0 auto;
+    margin-top: 120px;
+    height: 4px;
+    background-color: #EDECEA;
+}
+
+.bot {
+    width: 90%;
+    border: none;
+    margin: 0 auto;
+    margin-bottom: 120px;
+    height: 4px;
+    background-color: #EDECEA;
+}
+
+/* SAMARBEJDSPARTNERE END */
+
+
+/* MIN SIDE START */
+#minSideNav {
+    font-weight: bold;
+}
+
+#soegOpskrifter {
+    height: 300px;
+}
+
+.minSide h2 {
+    color: dimgrey;
+    font-size: 35px;
+    font-weight: 300;
+    text-align: center;
+    padding: 50px;
+}
+
+#minSideSearch {
+    padding: 0;
+    margin: 0;
+}
+
+/*KØBTE OPSKRIFTER START */
+#koebteOpskrifter {
+    background-color: #EDECEA;
+    max-width: 100%;
+}
+
+.overskriftopskrift {
+    color: dimgrey;
+    font-size: 35px;
+    text-align: center;
+}
+
+.koebteopskrifter-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: flex-start;
+    padding-left: 90px;
+    padding-bottom: 40px;
+}
+
+.koebteopskrifter-container a {
+    margin: 0;
+}
+
+.container-billeder {
+    padding-bottom: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.container-billeder p {
+    padding: 15px;
+    margin-top: -5px;
+    background-color: white;
+    text-align: center;
+}
+
+/* KØBTE OPSKRIFTER END */
+
+
+/*GEMTE OPSKRIFTER START */
+#gemteOpskrifter {
+    height: 850px;
+}
+
+.gemteopskrifter-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: center;
+    padding-left: 90px;
+}
+
+.gemteopskrifter-container a {
+    margin: 0;
+}
+
+.container-billeder-gemt {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+}
+
+.container-billeder-gemt p {
+    padding: 15px;
+    margin-top: -5px;
+    background-color: #EDECEA;
+    text-align: center;
+}
+
+/*GEMTE OPSKRIFTER END*/
+/* MIN SIDE END */
+
+
+/* INSTAGRAM INSPIRATION START */
+.instagram-container {
+    background-color: #EDECEA;
+    text-align: center;
+    width: 100%;
+    height: 1040px;
+}
+
+.instagram-container h2 {
+    padding: 2%;
+    font-size: 35px;
+    font-weight: 300;
+}
+
+.InspirationInstagram {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    padding: 20px;
+}
+
+.InspirationInstagram img {
+    width: 90%;
+}
+
+/* INSTAGRAM INSPIRATION SLUT */
+
+
+/* FOOTER START */
+footer {
+    background-color: #474553;
+    height: 400px;
+    color: white;
+    text-align: center;
+    padding: 60px;
+    font-size: 23px;
+    line-height: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer img {
+    width: 60%;
+    margin-top: 30px;
+}
+
+.footerimg {
+    width: 10%;
+}
+
+footer h3 {
+    font-weight: 300;
+    font-size: 24px;
+}
+
+.footerBot {
+    padding-top: 10px;
+    line-height: 35px;
+    width: 100%;
+}
+
+.footerimg a {
+    margin: 0;
+}
+
+.footerGrey {
+    color: darkgrey;
+    font-size: 20px;
+}
+
+/* FOOTER END */
